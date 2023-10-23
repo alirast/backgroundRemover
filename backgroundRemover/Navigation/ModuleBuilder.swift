@@ -13,8 +13,8 @@ protocol ModuleBuilderProtocol: AnyObject {
 
 final class ModuleBuilder: ModuleBuilderProtocol {
     func createFirstController(coordinator: Coordinator) -> UIViewController? {
-        let controller = FirstController()
-        let presenter = FirstScreenPresenter()
+        let controller = OnboardingController()
+        let presenter = OnboardingPresenter()
         presenter.coordinator = coordinator
         controller.presenter = presenter
         return controller

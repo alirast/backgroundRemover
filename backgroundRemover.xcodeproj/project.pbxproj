@@ -11,11 +11,15 @@
 		4FD7571B2AE6E2AF00EF48E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD7571A2AE6E2AF00EF48E1 /* SceneDelegate.swift */; };
 		4FD757222AE6E2B100EF48E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FD757212AE6E2B100EF48E1 /* Assets.xcassets */; };
 		4FD757252AE6E2B100EF48E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FD757232AE6E2B100EF48E1 /* LaunchScreen.storyboard */; };
-		4FD7572D2AE6E30700EF48E1 /* FirstPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD7572C2AE6E30700EF48E1 /* FirstPresenter.swift */; };
+		4FD7572D2AE6E30700EF48E1 /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD7572C2AE6E30700EF48E1 /* OnboardingPresenter.swift */; };
 		4FD7572F2AE6E33A00EF48E1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD7572E2AE6E33A00EF48E1 /* Coordinator.swift */; };
 		4FD757312AE6E35600EF48E1 /* NavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD757302AE6E35600EF48E1 /* NavigationProtocol.swift */; };
 		4FD757332AE6E53700EF48E1 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD757322AE6E53700EF48E1 /* ModuleBuilder.swift */; };
-		4FD757352AE6E6D200EF48E1 /* FirstController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD757342AE6E6D200EF48E1 /* FirstController.swift */; };
+		4FD757352AE6E6D200EF48E1 /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD757342AE6E6D200EF48E1 /* OnboardingController.swift */; };
+		4FD7573C2AE6EBFD00EF48E1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4FD7573B2AE6EBFD00EF48E1 /* SnapKit */; };
+		4FD7573E2AE6EBFD00EF48E1 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 4FD7573D2AE6EBFD00EF48E1 /* SnapKit-Dynamic */; };
+		4FD757402AE6F4EB00EF48E1 /* OnboardingCellTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD7573F2AE6F4EB00EF48E1 /* OnboardingCellTypes.swift */; };
+		4FD757422AE6F7B100EF48E1 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD757412AE6F7B100EF48E1 /* OnboardingCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,11 +29,13 @@
 		4FD757212AE6E2B100EF48E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FD757242AE6E2B100EF48E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FD757262AE6E2B100EF48E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4FD7572C2AE6E30700EF48E1 /* FirstPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPresenter.swift; sourceTree = "<group>"; };
+		4FD7572C2AE6E30700EF48E1 /* OnboardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPresenter.swift; sourceTree = "<group>"; };
 		4FD7572E2AE6E33A00EF48E1 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		4FD757302AE6E35600EF48E1 /* NavigationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationProtocol.swift; sourceTree = "<group>"; };
 		4FD757322AE6E53700EF48E1 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
-		4FD757342AE6E6D200EF48E1 /* FirstController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstController.swift; sourceTree = "<group>"; };
+		4FD757342AE6E6D200EF48E1 /* OnboardingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingController.swift; sourceTree = "<group>"; };
+		4FD7573F2AE6F4EB00EF48E1 /* OnboardingCellTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCellTypes.swift; sourceTree = "<group>"; };
+		4FD757412AE6F7B100EF48E1 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FD7573C2AE6EBFD00EF48E1 /* SnapKit in Frameworks */,
+				4FD7573E2AE6EBFD00EF48E1 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,18 +93,20 @@
 		4FD757372AE6E80800EF48E1 /* AppFlow */ = {
 			isa = PBXGroup;
 			children = (
-				4FD757382AE6E81400EF48E1 /* FirstScreen */,
+				4FD757382AE6E81400EF48E1 /* Onboarding */,
 			);
 			path = AppFlow;
 			sourceTree = "<group>";
 		};
-		4FD757382AE6E81400EF48E1 /* FirstScreen */ = {
+		4FD757382AE6E81400EF48E1 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				4FD7572C2AE6E30700EF48E1 /* FirstPresenter.swift */,
-				4FD757342AE6E6D200EF48E1 /* FirstController.swift */,
+				4FD7572C2AE6E30700EF48E1 /* OnboardingPresenter.swift */,
+				4FD757342AE6E6D200EF48E1 /* OnboardingController.swift */,
+				4FD7573F2AE6F4EB00EF48E1 /* OnboardingCellTypes.swift */,
+				4FD757412AE6F7B100EF48E1 /* OnboardingCell.swift */,
 			);
-			path = FirstScreen;
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		4FD757392AE6E94100EF48E1 /* App */ = {
@@ -124,6 +134,10 @@
 			dependencies = (
 			);
 			name = backgroundRemover;
+			packageProductDependencies = (
+				4FD7573B2AE6EBFD00EF48E1 /* SnapKit */,
+				4FD7573D2AE6EBFD00EF48E1 /* SnapKit-Dynamic */,
+			);
 			productName = backgroundRemover;
 			productReference = 4FD757152AE6E2AF00EF48E1 /* backgroundRemover.app */;
 			productType = "com.apple.product-type.application";
@@ -152,6 +166,9 @@
 				Base,
 			);
 			mainGroup = 4FD7570C2AE6E2AF00EF48E1;
+			packageReferences = (
+				4FD7573A2AE6EBFD00EF48E1 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 4FD757162AE6E2AF00EF48E1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -181,10 +198,12 @@
 				4FD757192AE6E2AF00EF48E1 /* AppDelegate.swift in Sources */,
 				4FD7572F2AE6E33A00EF48E1 /* Coordinator.swift in Sources */,
 				4FD757312AE6E35600EF48E1 /* NavigationProtocol.swift in Sources */,
-				4FD757352AE6E6D200EF48E1 /* FirstController.swift in Sources */,
+				4FD757352AE6E6D200EF48E1 /* OnboardingController.swift in Sources */,
+				4FD757402AE6F4EB00EF48E1 /* OnboardingCellTypes.swift in Sources */,
+				4FD757422AE6F7B100EF48E1 /* OnboardingCell.swift in Sources */,
 				4FD757332AE6E53700EF48E1 /* ModuleBuilder.swift in Sources */,
 				4FD7571B2AE6E2AF00EF48E1 /* SceneDelegate.swift in Sources */,
-				4FD7572D2AE6E30700EF48E1 /* FirstPresenter.swift in Sources */,
+				4FD7572D2AE6E30700EF48E1 /* OnboardingPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +416,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4FD7573A2AE6EBFD00EF48E1 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4FD7573B2AE6EBFD00EF48E1 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4FD7573A2AE6EBFD00EF48E1 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		4FD7573D2AE6EBFD00EF48E1 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4FD7573A2AE6EBFD00EF48E1 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4FD7570D2AE6E2AF00EF48E1 /* Project object */;
 }
