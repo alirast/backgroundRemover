@@ -130,8 +130,8 @@
 		4FD757372AE6E80800EF48E1 /* AppFlow */ = {
 			isa = PBXGroup;
 			children = (
-				4F85F3D32AE810BE009A2B46 /* MainFlow */,
 				4FD757382AE6E81400EF48E1 /* Onboarding */,
+				4F85F3D32AE810BE009A2B46 /* MainFlow */,
 			);
 			path = AppFlow;
 			sourceTree = "<group>";
