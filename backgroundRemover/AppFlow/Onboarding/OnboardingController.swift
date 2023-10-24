@@ -21,6 +21,7 @@ final class OnboardingController: UIViewController {
         nextButton.layer.cornerRadius = 10
         nextButton.backgroundColor = .blue
         nextButton.layer.cornerCurve = .circular
+        nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
         return nextButton
     }()
     
@@ -64,15 +65,26 @@ final class OnboardingController: UIViewController {
     private func configureOnboardingCollectionView() {
         onboardingCollectionView.backgroundColor = .white
         onboardingCollectionView.showsHorizontalScrollIndicator = false
-        //onboardingCollectionView.delegate = self
-        //onboardingCollectionView.dataSource = self
+        onboardingCollectionView.delegate = self
+        onboardingCollectionView.dataSource = self
         onboardingCollectionView.isPagingEnabled = true
+        onboardingCollectionView.register(classCell: OnboardingCell.self)
+        onboardingCollectionView.isUserInteractionEnabled = true
     }
     
     private func configureCollectionViewLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         return layout
+    }
+    
+    @objc private func nextButtonTapped() {
+        selectedCell += 1
+        guard selectedCell < cells.count else {
+            presenter?.onboardingEnded()
+            return
+        }
+        onboardingCollectionView.scrollToItem(at: IndexPath(row: selectedCell, section: 0), at: .centeredHorizontally, animated: true)
     }
 
 //MARK: - Constraints
@@ -94,5 +106,39 @@ final class OnboardingController: UIViewController {
             make.centerX.equalToSuperview()
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset((UIScreen.main.bounds.height / 100) * 5)
         }
+    }
+}
+
+//MARK: - Delegate & DataSource
+extension OnboardingController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return cells.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.reusableCell(classCell: OnboardingCell.self, indexPath: indexPath)
+        cell.configure(cellType: cells[indexPath.item])
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width, height: collectionView.frame.height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offset = scrollView.contentOffset.x
+        let width = scrollView.frame.width
+        let horizontalCenter = width / 2
+        pageControl.currentPage = Int(offset + horizontalCenter) / Int(width)
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let width = scrollView.frame.width
+        selectedCell = Int(scrollView.contentOffset.x / width)
+        pageControl.currentPage = selectedCell
     }
 }

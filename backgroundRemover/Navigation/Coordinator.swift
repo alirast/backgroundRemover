@@ -23,4 +23,17 @@ final class Coordinator: NavigationProtocol {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
     }
+    
+    func routeToMainController() {
+        guard let mainController = controllerFactory.createMainController(coordinator: self) else { return }
+        navigationController = UINavigationController(rootViewController: mainController)
+        navigationController?.isNavigationBarHidden = true
+        window.rootViewController = navigationController
+        window.makeKeyAndVisible()
+    }
+    
+    func switchToMainController() {
+        guard let mainController = controllerFactory.createMainController(coordinator: self) else { return }
+        navigationController?.pushViewController(mainController, animated: true)
+    }
 }

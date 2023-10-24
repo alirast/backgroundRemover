@@ -25,6 +25,12 @@ final class OnboardingCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func configure(cellType: OnboardingCellTypes) {
+        cellImageView.image = cellType.getCellImage()
+        titleLabel.text = cellType.getTitle()
+        descriptionLabel.text = cellType.getDescription()
+    }
+    
 //MARK: - Private funcs
     private func configureUI() {
         configureView()
@@ -53,7 +59,6 @@ final class OnboardingCell: UICollectionViewCell {
     
     private func configureDescriptionLabel() {
         descriptionLabel.font = UIFont.systemFont(ofSize: 20)
-        descriptionLabel.textColor = .white
         descriptionLabel.textAlignment = .center
         descriptionLabel.numberOfLines = 0
         descriptionLabel.lineBreakMode = .byWordWrapping
@@ -83,5 +88,4 @@ final class OnboardingCell: UICollectionViewCell {
             make.leading.trailing.equalToSuperview().inset(24)
         }
     }
-    
 }
