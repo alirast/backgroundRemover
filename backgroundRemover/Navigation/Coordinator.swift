@@ -36,4 +36,9 @@ final class Coordinator: NavigationProtocol {
         guard let mainController = controllerFactory.createMainController(coordinator: self) else { return }
         navigationController?.pushViewController(mainController, animated: true)
     }
+    
+    func routeToPhotoPickerController() {
+        guard let photoPickerController = controllerFactory.createPhotoPickerController(coordinator: self) else { return }
+        navigationController?.pushViewController(photoPickerController, animated: true)
+    }
 }

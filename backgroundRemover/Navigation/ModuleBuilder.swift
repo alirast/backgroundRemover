@@ -10,6 +10,7 @@ import UIKit
 protocol ModuleBuilderProtocol: AnyObject {
     func createFirstController(coordinator: Coordinator) -> UIViewController?
     func createMainController(coordinator: Coordinator) -> UIViewController?
+    func createPhotoPickerController(coordinator: Coordinator) -> UIViewController?
 }
 
 final class ModuleBuilder: ModuleBuilderProtocol {
@@ -24,6 +25,14 @@ final class ModuleBuilder: ModuleBuilderProtocol {
     func createMainController(coordinator: Coordinator) -> UIViewController? {
         let controller = MainController()
         let presenter = MainPresenter()
+        presenter.coordinator = coordinator
+        controller.presenter = presenter
+        return controller
+    }
+    
+    func createPhotoPickerController(coordinator: Coordinator) -> UIViewController? {
+        let controller = PhotoPickerController()
+        let presenter = PhotoPickerPresenter()
         presenter.coordinator = coordinator
         controller.presenter = presenter
         return controller

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F3912C32AE93C4B00147925 /* PhotoPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3912C22AE93C4B00147925 /* PhotoPickerController.swift */; };
+		4F3912C52AE93C7800147925 /* PhotoPickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3912C42AE93C7800147925 /* PhotoPickerPresenter.swift */; };
 		4F85F3D22AE80ADB009A2B46 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F85F3D12AE80ADB009A2B46 /* CollectionView.swift */; };
 		4F85F3D52AE810D1009A2B46 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F85F3D42AE810D1009A2B46 /* MainController.swift */; };
 		4F85F3D72AE810FA009A2B46 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F85F3D62AE810FA009A2B46 /* MainPresenter.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F3912C22AE93C4B00147925 /* PhotoPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerController.swift; sourceTree = "<group>"; };
+		4F3912C42AE93C7800147925 /* PhotoPickerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerPresenter.swift; sourceTree = "<group>"; };
 		4F85F3D12AE80ADB009A2B46 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		4F85F3D42AE810D1009A2B46 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		4F85F3D62AE810FA009A2B46 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
@@ -61,6 +65,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F3912C12AE93C3300147925 /* PhotoPicker */ = {
+			isa = PBXGroup;
+			children = (
+				4F3912C22AE93C4B00147925 /* PhotoPickerController.swift */,
+				4F3912C42AE93C7800147925 /* PhotoPickerPresenter.swift */,
+			);
+			path = PhotoPicker;
+			sourceTree = "<group>";
+		};
 		4F85F3D02AE80AC6009A2B46 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +143,7 @@
 		4FD757372AE6E80800EF48E1 /* AppFlow */ = {
 			isa = PBXGroup;
 			children = (
+				4F3912C12AE93C3300147925 /* PhotoPicker */,
 				4FD757382AE6E81400EF48E1 /* Onboarding */,
 				4F85F3D32AE810BE009A2B46 /* MainFlow */,
 			);
@@ -239,10 +253,12 @@
 				4FD757312AE6E35600EF48E1 /* NavigationProtocol.swift in Sources */,
 				4F85F3DA2AE813D0009A2B46 /* UserDefaultsManager.swift in Sources */,
 				4FD757352AE6E6D200EF48E1 /* OnboardingController.swift in Sources */,
+				4F3912C52AE93C7800147925 /* PhotoPickerPresenter.swift in Sources */,
 				4FD757402AE6F4EB00EF48E1 /* OnboardingCellTypes.swift in Sources */,
 				4FD757422AE6F7B100EF48E1 /* OnboardingCell.swift in Sources */,
 				4F85F3D22AE80ADB009A2B46 /* CollectionView.swift in Sources */,
 				4F85F3DC2AE8142D009A2B46 /* UserDefaultsKeys.swift in Sources */,
+				4F3912C32AE93C4B00147925 /* PhotoPickerController.swift in Sources */,
 				4F85F3D72AE810FA009A2B46 /* MainPresenter.swift in Sources */,
 				4F85F3D52AE810D1009A2B46 /* MainController.swift in Sources */,
 				4FD757332AE6E53700EF48E1 /* ModuleBuilder.swift in Sources */,

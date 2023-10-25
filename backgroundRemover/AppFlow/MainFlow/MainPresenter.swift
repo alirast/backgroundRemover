@@ -10,4 +10,7 @@ import Foundation
 final class MainPresenter {
     var coordinator: Coordinator?
     
+    func openPhotoPickerController() {
+        coordinator?.routeToPhotoPickerController()
+    }
 }
