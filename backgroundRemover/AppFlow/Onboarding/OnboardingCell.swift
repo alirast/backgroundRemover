@@ -52,13 +52,14 @@ final class OnboardingCell: UICollectionViewCell {
     
     private func configureTitleLabel() {
         titleLabel.textAlignment = .center
-        titleLabel.font = UIFont.systemFont(ofSize: 30)
+        titleLabel.font = UIFont(name: "Gilroy-Bold", size: 20)
         titleLabel.numberOfLines = 0
         titleLabel.lineBreakMode = .byWordWrapping
     }
     
     private func configureDescriptionLabel() {
-        descriptionLabel.font = UIFont.systemFont(ofSize: 20)
+        descriptionLabel.font = UIFont(name: "Gilroy-Light", size: 18)
+        descriptionLabel.textColor = .grayColor1
         descriptionLabel.textAlignment = .center
         descriptionLabel.numberOfLines = 0
         descriptionLabel.lineBreakMode = .byWordWrapping
@@ -80,11 +81,11 @@ final class OnboardingCell: UICollectionViewCell {
         
         titleLabel.snp.makeConstraints { make in
             make.top.equalTo(cellImageView.snp.bottom).inset(-16)
-            make.leading.trailing.equalToSuperview().inset(24)
+            make.centerX.equalTo(snp.centerX)
         }
         
         descriptionLabel.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).inset(-4)
+            make.top.equalTo(titleLabel.snp.bottom).inset(-20)
             make.leading.trailing.equalToSuperview().inset(24)
         }
     }

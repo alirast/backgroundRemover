@@ -10,6 +10,15 @@
 		4F3912C32AE93C4B00147925 /* MediaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3912C22AE93C4B00147925 /* MediaController.swift */; };
 		4F3912C52AE93C7800147925 /* MediaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3912C42AE93C7800147925 /* MediaPresenter.swift */; };
 		4F3912C92AE96A7700147925 /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3912C82AE96A7700147925 /* HexColor.swift */; };
+		4F3912CD2AE9705100147925 /* Gilroy-UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F3912CC2AE9705100147925 /* Gilroy-UltraLight.ttf */; };
+		4F3912D62AE9706000147925 /* Gilroy-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F3912CE2AE9706000147925 /* Gilroy-Light.ttf */; };
+		4F3912D72AE9706000147925 /* Gilroy-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F3912CF2AE9706000147925 /* Gilroy-Medium.ttf */; };
+		4F3912D82AE9706000147925 /* Gilroy-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F3912D02AE9706000147925 /* Gilroy-Heavy.ttf */; };
+		4F3912D92AE9706000147925 /* Gilroy-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F3912D12AE9706000147925 /* Gilroy-SemiBold.ttf */; };
+		4F3912DA2AE9706000147925 /* Gilroy-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F3912D22AE9706000147925 /* Gilroy-Thin.ttf */; };
+		4F3912DB2AE9706000147925 /* Gilroy-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F3912D32AE9706000147925 /* Gilroy-ExtraBold.ttf */; };
+		4F3912DC2AE9706000147925 /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F3912D42AE9706000147925 /* Gilroy-Bold.ttf */; };
+		4F3912DD2AE9706000147925 /* Gilroy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F3912D52AE9706000147925 /* Gilroy-Regular.ttf */; };
 		4F85F3D22AE80ADB009A2B46 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F85F3D12AE80ADB009A2B46 /* CollectionView.swift */; };
 		4F85F3D52AE810D1009A2B46 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F85F3D42AE810D1009A2B46 /* MainController.swift */; };
 		4F85F3D72AE810FA009A2B46 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F85F3D62AE810FA009A2B46 /* MainPresenter.swift */; };
@@ -34,6 +43,15 @@
 		4F3912C22AE93C4B00147925 /* MediaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaController.swift; sourceTree = "<group>"; };
 		4F3912C42AE93C7800147925 /* MediaPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPresenter.swift; sourceTree = "<group>"; };
 		4F3912C82AE96A7700147925 /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
+		4F3912CC2AE9705100147925 /* Gilroy-UltraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-UltraLight.ttf"; sourceTree = "<group>"; };
+		4F3912CE2AE9706000147925 /* Gilroy-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Light.ttf"; sourceTree = "<group>"; };
+		4F3912CF2AE9706000147925 /* Gilroy-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Medium.ttf"; sourceTree = "<group>"; };
+		4F3912D02AE9706000147925 /* Gilroy-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Heavy.ttf"; sourceTree = "<group>"; };
+		4F3912D12AE9706000147925 /* Gilroy-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-SemiBold.ttf"; sourceTree = "<group>"; };
+		4F3912D22AE9706000147925 /* Gilroy-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Thin.ttf"; sourceTree = "<group>"; };
+		4F3912D32AE9706000147925 /* Gilroy-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-ExtraBold.ttf"; sourceTree = "<group>"; };
+		4F3912D42AE9706000147925 /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
+		4F3912D52AE9706000147925 /* Gilroy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Regular.ttf"; sourceTree = "<group>"; };
 		4F85F3D12AE80ADB009A2B46 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		4F85F3D42AE810D1009A2B46 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		4F85F3D62AE810FA009A2B46 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
@@ -74,6 +92,22 @@
 				4F3912C42AE93C7800147925 /* MediaPresenter.swift */,
 			);
 			path = Media;
+			sourceTree = "<group>";
+		};
+		4F3912DE2AE9739F00147925 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4F3912CC2AE9705100147925 /* Gilroy-UltraLight.ttf */,
+				4F3912D42AE9706000147925 /* Gilroy-Bold.ttf */,
+				4F3912D32AE9706000147925 /* Gilroy-ExtraBold.ttf */,
+				4F3912D02AE9706000147925 /* Gilroy-Heavy.ttf */,
+				4F3912CE2AE9706000147925 /* Gilroy-Light.ttf */,
+				4F3912CF2AE9706000147925 /* Gilroy-Medium.ttf */,
+				4F3912D52AE9706000147925 /* Gilroy-Regular.ttf */,
+				4F3912D12AE9706000147925 /* Gilroy-SemiBold.ttf */,
+				4F3912D22AE9706000147925 /* Gilroy-Thin.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		4F85F3D02AE80AC6009A2B46 /* Extensions */ = {
@@ -122,6 +156,7 @@
 		4FD757172AE6E2AF00EF48E1 /* backgroundRemover */ = {
 			isa = PBXGroup;
 			children = (
+				4F3912DE2AE9739F00147925 /* Fonts */,
 				4F85F3D02AE80AC6009A2B46 /* Extensions */,
 				4FD757392AE6E94100EF48E1 /* App */,
 				4FD757372AE6E80800EF48E1 /* AppFlow */,
@@ -239,8 +274,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F3912DD2AE9706000147925 /* Gilroy-Regular.ttf in Resources */,
+				4F3912DB2AE9706000147925 /* Gilroy-ExtraBold.ttf in Resources */,
+				4F3912D82AE9706000147925 /* Gilroy-Heavy.ttf in Resources */,
+				4F3912DA2AE9706000147925 /* Gilroy-Thin.ttf in Resources */,
 				4FD757252AE6E2B100EF48E1 /* LaunchScreen.storyboard in Resources */,
 				4FD757222AE6E2B100EF48E1 /* Assets.xcassets in Resources */,
+				4F3912D72AE9706000147925 /* Gilroy-Medium.ttf in Resources */,
+				4F3912D92AE9706000147925 /* Gilroy-SemiBold.ttf in Resources */,
+				4F3912DC2AE9706000147925 /* Gilroy-Bold.ttf in Resources */,
+				4F3912CD2AE9705100147925 /* Gilroy-UltraLight.ttf in Resources */,
+				4F3912D62AE9706000147925 /* Gilroy-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,7 +18,7 @@ final class OnboardingController: UIViewController {
     private lazy var continueButton: UIButton = {
         let continueButton = UIButton()
         continueButton.setTitle("Continue", for: .normal)
-        continueButton.titleLabel?.font = UIFont(name: "Gilroy", size: 18)
+        continueButton.titleLabel?.font = UIFont(name: "Gilroy-Bold", size: 18)
         continueButton.layer.cornerRadius = 10
         continueButton.backgroundColor = .blueColor
         continueButton.layer.cornerCurve = .circular
@@ -28,8 +28,8 @@ final class OnboardingController: UIViewController {
     
     private lazy var pageControl: UIPageControl = {
         let pageControl = UIPageControl()
-        pageControl.pageIndicatorTintColor = .gray
-        pageControl.currentPageIndicatorTintColor = .white
+        pageControl.pageIndicatorTintColor = .white.withAlphaComponent(0.3)
+        pageControl.currentPageIndicatorTintColor = .blueColor
         pageControl.isUserInteractionEnabled = false
         pageControl.numberOfPages = 4
         return pageControl

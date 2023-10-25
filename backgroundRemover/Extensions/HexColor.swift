@@ -9,6 +9,7 @@ import UIKit
 
 extension UIColor {
     static let blueColor = UIColor(hex: "2C53EC")
+    static let grayColor1 = UIColor(hex: "7B7B7B")
     
     convenience init(hex: String, alpha: CGFloat? = nil) {
         var hex: String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
