@@ -13,13 +13,13 @@ enum OnboardingCellTypes {
     func getCellImage() -> UIImage? {
         switch self {
         case .first:
-            return UIImage()
+            return R.image.firstCellImage()
         case .second:
-            return UIImage()
+            return R.image.secondCellImage()
         case .third:
-            return UIImage()
+            return R.image.thirdCellImage()
         case .fourth:
-            return UIImage()
+            return R.image.fourthCellImage()
         }
     }
     

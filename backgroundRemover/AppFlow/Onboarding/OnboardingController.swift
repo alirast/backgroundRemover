@@ -13,9 +13,16 @@ final class OnboardingController: UIViewController {
 //MARK: - Properties
     var presenter: OnboardingPresenter?
     
+    private lazy var lightImageView: UIImageView = {
+        let lightImageView = UIImageView()
+        lightImageView.contentMode = .scaleAspectFill
+        lightImageView.image = R.image.light()
+        return lightImageView
+    }()
+    
     private lazy var textureImageView: UIImageView = {
         let textureImageView = UIImageView()
-        textureImageView.contentMode = .scaleAspectFit
+        textureImageView.contentMode = .scaleAspectFill
         textureImageView.image = R.image.texture()
         return textureImageView
     }()
@@ -65,6 +72,7 @@ final class OnboardingController: UIViewController {
     }
     
     private func addSubViews() {
+        view.addSubview(lightImageView)
         view.addSubview(textureImageView)
         view.addSubview(continueButton)
         view.addSubview(pageControl)
@@ -98,13 +106,17 @@ final class OnboardingController: UIViewController {
 
 //MARK: - Constraints
     private func setupConstraints() {
+        lightImageView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
         textureImageView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
         
         onboardingCollectionView.snp.makeConstraints { make in
             make.top.leading.trailing.equalToSuperview()
-            make.bottom.equalTo(continueButton.snp.top)
+            make.bottom.equalTo(continueButton.snp.top).inset(-30)
         }
         
         continueButton.snp.makeConstraints { make in

@@ -75,19 +75,20 @@ final class OnboardingCell: UICollectionViewCell {
 //MARK: - Constraints
     private func setupConstraints() {
         cellImageView.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.leading.trailing.equalToSuperview()
-            make.height.equalTo((UIScreen.main.bounds.height / 100) * 63)
+            make.top.equalToSuperview().inset(110)
+            make.leading.trailing.equalToSuperview().inset(30)
+            make.height.equalTo((UIScreen.main.bounds.height / 100) * 45)
         }
         
         titleLabel.snp.makeConstraints { make in
-            make.top.equalTo(cellImageView.snp.bottom).inset(-16)
+            make.top.equalTo(cellImageView.snp.bottom).inset(-35)
             make.centerX.equalTo(snp.centerX)
         }
         
         descriptionLabel.snp.makeConstraints { make in
             make.top.equalTo(titleLabel.snp.bottom).inset(-20)
             make.leading.trailing.equalToSuperview().inset(24)
+            make.bottom.equalToSuperview()
         }
     }
 }
