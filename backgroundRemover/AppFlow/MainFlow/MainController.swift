@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Photos
+import PhotosUI
 
 final class MainController: UIViewController {
     
@@ -36,7 +38,24 @@ final class MainController: UIViewController {
 //MARK: - private funcs
     @objc private func choosePicture() {
         debugPrint("choose picture")
-        presenter?.openPhotoPickerController()
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = self
+        present(imagePicker, animated: true)
+    }
+}
+
+//MARK: - delegates
+extension MainController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let key = UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerOriginalImage")
+        if let image = info[key] as? UIImage {
+            picker.dismiss(animated: true)
+            presenter?.openMediaController(image: image)
+        }
     }
     
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true)
+    }
 }

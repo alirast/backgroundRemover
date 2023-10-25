@@ -5,12 +5,12 @@
 //  Created by N S on 24.10.2023.
 //
 
-import Foundation
+import UIKit
 
 final class MainPresenter {
     var coordinator: Coordinator?
     
-    func openPhotoPickerController() {
-        coordinator?.routeToPhotoPickerController()
+    func openMediaController(image: UIImage) {
+        coordinator?.routeToMediaController(image)
     }
 }

@@ -37,8 +37,8 @@ final class Coordinator: NavigationProtocol {
         navigationController?.pushViewController(mainController, animated: true)
     }
     
-    func routeToPhotoPickerController() {
-        guard let photoPickerController = controllerFactory.createPhotoPickerController(coordinator: self) else { return }
-        navigationController?.pushViewController(photoPickerController, animated: true)
+    func routeToMediaController(_ image: UIImage) {
+        guard let mediaController = controllerFactory.createMediaController(coordinator: self, image: image) else { return }
+        navigationController?.pushViewController(mediaController, animated: true)
     }
 }
