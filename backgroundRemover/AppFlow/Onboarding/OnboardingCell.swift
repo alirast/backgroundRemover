@@ -15,10 +15,20 @@ final class OnboardingCell: UICollectionViewCell {
     private let titleLabel = UILabel()
     private let descriptionLabel = UILabel()
     
+    private let upperShadowGradientLayer = CAGradientLayer()
+    private let bottomShadowGradientLayer = CAGradientLayer()
+    
 //MARK: - init
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureUI()
+    }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        upperShadowGradientLayer.frame.size.height = bounds.height / 2
+        upperShadowGradientLayer.frame.size.width = bounds.width
+        
+        bottomShadowGradientLayer.frame = CGRect(x: 0, y: (bounds.height / 2), width: bounds.width, height: (bounds.height / 2))
     }
     
     required init?(coder: NSCoder) {
@@ -26,6 +36,9 @@ final class OnboardingCell: UICollectionViewCell {
     }
     
     func configure(cellType: OnboardingCellTypes) {
+        if cellType == .fourth {
+            configureShadowGradientLayers()
+        }
         cellImageView.image = cellType.getCellImage()
         titleLabel.text = cellType.getTitle()
         descriptionLabel.text = cellType.getDescription()
@@ -48,6 +61,18 @@ final class OnboardingCell: UICollectionViewCell {
     
     private func configureCellImageView() {
         cellImageView.contentMode = .scaleAspectFill
+    }
+    
+    private func configureShadowGradientLayers() {
+        upperShadowGradientLayer.colors = [UIColor.backgroundColor.cgColor, UIColor.clear.cgColor]
+        upperShadowGradientLayer.startPoint = CGPoint(x: 0, y: 0.25)
+        upperShadowGradientLayer.endPoint = CGPoint(x: 0, y: 1)
+        layer.addSublayer(upperShadowGradientLayer)
+        
+        bottomShadowGradientLayer.colors = [UIColor.clear.cgColor, UIColor.backgroundColor.cgColor]
+        bottomShadowGradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        bottomShadowGradientLayer.endPoint = CGPoint(x: 0, y: 0.75)
+        layer.addSublayer(bottomShadowGradientLayer)
     }
     
     private func configureTitleLabel() {
