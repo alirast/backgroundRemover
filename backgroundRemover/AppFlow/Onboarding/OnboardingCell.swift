@@ -52,6 +52,7 @@ final class OnboardingCell: UICollectionViewCell {
     
     private func configureTitleLabel() {
         titleLabel.textAlignment = .center
+        titleLabel.textColor = .white
         titleLabel.font = UIFont(name: "Gilroy-Bold", size: 20)
         titleLabel.numberOfLines = 0
         titleLabel.lineBreakMode = .byWordWrapping

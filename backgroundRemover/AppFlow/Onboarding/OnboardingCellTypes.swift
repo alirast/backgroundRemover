@@ -26,26 +26,26 @@ enum OnboardingCellTypes {
     func getTitle() -> String? {
         switch self {
         case .first:
-            return "first"
+            return R.string.localizable.onboardingControllerFirstCellTitle()
         case .second:
-            return "second"
+            return R.string.localizable.onboardingControllerSecondCellTitle()
         case .third:
-            return "third"
+            return R.string.localizable.onboardingControllerThirdCellTitle()
         case .fourth:
-            return "fourth"
+            return R.string.localizable.onboardingControllerFourthCellTitle()
         }
     }
     
     func getDescription() -> String? {
         switch self {
         case .first:
-            return "first description"
+            return R.string.localizable.onboardingControllerFirstCellDescription()
         case .second:
-            return "second description"
+            return R.string.localizable.onboardingControllerSecondCellDescription()
         case .third:
-            return "third description"
+            return R.string.localizable.onboardingControllerThirdCellDescription()
         case .fourth:
-            return "fourth description"
+            return R.string.localizable.onboardingControllerFourthCellDescription()
         }
     }
 }

@@ -19,6 +19,8 @@
 		4F3912DB2AE9706000147925 /* Gilroy-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F3912D32AE9706000147925 /* Gilroy-ExtraBold.ttf */; };
 		4F3912DC2AE9706000147925 /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F3912D42AE9706000147925 /* Gilroy-Bold.ttf */; };
 		4F3912DD2AE9706000147925 /* Gilroy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F3912D52AE9706000147925 /* Gilroy-Regular.ttf */; };
+		4F3912E12AE9760600147925 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 4F3912E02AE9760600147925 /* RswiftLibrary */; };
+		4F3912E82AE9766A00147925 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4F3912E72AE9766A00147925 /* Localizable.strings */; };
 		4F85F3D22AE80ADB009A2B46 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F85F3D12AE80ADB009A2B46 /* CollectionView.swift */; };
 		4F85F3D52AE810D1009A2B46 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F85F3D42AE810D1009A2B46 /* MainController.swift */; };
 		4F85F3D72AE810FA009A2B46 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F85F3D62AE810FA009A2B46 /* MainPresenter.swift */; };
@@ -52,6 +54,7 @@
 		4F3912D32AE9706000147925 /* Gilroy-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-ExtraBold.ttf"; sourceTree = "<group>"; };
 		4F3912D42AE9706000147925 /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
 		4F3912D52AE9706000147925 /* Gilroy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Regular.ttf"; sourceTree = "<group>"; };
+		4F3912E72AE9766A00147925 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		4F85F3D12AE80ADB009A2B46 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		4F85F3D42AE810D1009A2B46 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		4F85F3D62AE810FA009A2B46 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
@@ -79,6 +82,7 @@
 			files = (
 				4FD7573C2AE6EBFD00EF48E1 /* SnapKit in Frameworks */,
 				4FD7573E2AE6EBFD00EF48E1 /* SnapKit-Dynamic in Frameworks */,
+				4F3912E12AE9760600147925 /* RswiftLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +144,7 @@
 		4FD7570C2AE6E2AF00EF48E1 = {
 			isa = PBXGroup;
 			children = (
+				4F3912E72AE9766A00147925 /* Localizable.strings */,
 				4FD757172AE6E2AF00EF48E1 /* backgroundRemover */,
 				4FD757162AE6E2AF00EF48E1 /* Products */,
 			);
@@ -223,11 +228,13 @@
 			buildRules = (
 			);
 			dependencies = (
+				4F3912E52AE9763100147925 /* PBXTargetDependency */,
 			);
 			name = backgroundRemover;
 			packageProductDependencies = (
 				4FD7573B2AE6EBFD00EF48E1 /* SnapKit */,
 				4FD7573D2AE6EBFD00EF48E1 /* SnapKit-Dynamic */,
+				4F3912E02AE9760600147925 /* RswiftLibrary */,
 			);
 			productName = backgroundRemover;
 			productReference = 4FD757152AE6E2AF00EF48E1 /* backgroundRemover.app */;
@@ -259,6 +266,7 @@
 			mainGroup = 4FD7570C2AE6E2AF00EF48E1;
 			packageReferences = (
 				4FD7573A2AE6EBFD00EF48E1 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				4F3912DF2AE9760600147925 /* XCRemoteSwiftPackageReference "R" */,
 			);
 			productRefGroup = 4FD757162AE6E2AF00EF48E1 /* Products */;
 			projectDirPath = "";
@@ -275,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F3912DD2AE9706000147925 /* Gilroy-Regular.ttf in Resources */,
+				4F3912E82AE9766A00147925 /* Localizable.strings in Resources */,
 				4F3912DB2AE9706000147925 /* Gilroy-ExtraBold.ttf in Resources */,
 				4F3912D82AE9706000147925 /* Gilroy-Heavy.ttf in Resources */,
 				4F3912DA2AE9706000147925 /* Gilroy-Thin.ttf in Resources */,
@@ -316,6 +325,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4F3912E52AE9763100147925 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 4F3912E42AE9763100147925 /* RswiftGenerateInternalResources */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4FD757232AE6E2B100EF48E1 /* LaunchScreen.storyboard */ = {
@@ -526,6 +542,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4F3912DF2AE9760600147925 /* XCRemoteSwiftPackageReference "R" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.4.0;
+			};
+		};
 		4FD7573A2AE6EBFD00EF48E1 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -537,6 +561,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4F3912E02AE9760600147925 /* RswiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F3912DF2AE9760600147925 /* XCRemoteSwiftPackageReference "R" */;
+			productName = RswiftLibrary;
+		};
+		4F3912E42AE9763100147925 /* RswiftGenerateInternalResources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F3912DF2AE9760600147925 /* XCRemoteSwiftPackageReference "R" */;
+			productName = "plugin:RswiftGenerateInternalResources";
+		};
 		4FD7573B2AE6EBFD00EF48E1 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4FD7573A2AE6EBFD00EF48E1 /* XCRemoteSwiftPackageReference "SnapKit" */;

@@ -13,6 +13,13 @@ final class OnboardingController: UIViewController {
 //MARK: - Properties
     var presenter: OnboardingPresenter?
     
+    private lazy var textureImageView: UIImageView = {
+        let textureImageView = UIImageView()
+        textureImageView.contentMode = .scaleAspectFit
+        textureImageView.image = R.image.texture()
+        return textureImageView
+    }()
+    
     private lazy var onboardingCollectionView = UICollectionView(frame: .zero, collectionViewLayout: configureCollectionViewLayout())
     
     private lazy var continueButton: UIButton = {
@@ -54,17 +61,18 @@ final class OnboardingController: UIViewController {
     }
     
     private func configureView() {
-        view.backgroundColor = .brown
+        view.backgroundColor = .backgroundColor
     }
     
     private func addSubViews() {
+        view.addSubview(textureImageView)
         view.addSubview(continueButton)
         view.addSubview(pageControl)
         view.addSubview(onboardingCollectionView)
     }
     
     private func configureOnboardingCollectionView() {
-        onboardingCollectionView.backgroundColor = .white
+        onboardingCollectionView.backgroundColor = .clear
         onboardingCollectionView.showsHorizontalScrollIndicator = false
         onboardingCollectionView.delegate = self
         onboardingCollectionView.dataSource = self
@@ -90,6 +98,10 @@ final class OnboardingController: UIViewController {
 
 //MARK: - Constraints
     private func setupConstraints() {
+        textureImageView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
         onboardingCollectionView.snp.makeConstraints { make in
             make.top.leading.trailing.equalToSuperview()
             make.bottom.equalTo(continueButton.snp.top)

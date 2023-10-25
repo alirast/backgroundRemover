@@ -1,0 +1,33 @@
+/* 
+  Localizable.strings
+  backgroundRemover
+
+  Created by N S on 25.10.2023.
+  
+*/
+
+//MARK: - onboarding
+
+"OnboardingController.firstCell.title" = "Remove background";
+"OnboardingController.secondCell.title" = "Leave a review";
+"OnboardingController.thirdCell.title" = "Choose your background";
+"OnboardingController.fourthCell.title" = "Get access to all files and features";
+
+"OnboardingController.firstCell.description" = "Enhance your photos by effortlessly removing the background";
+"OnboardingController.secondCell.description" = "Share your feedback and help us improve. Your reviews matter";
+"OnboardingController.thirdCell.description" = "Express yourself by selecting unique backgrounds for your images";
+"OnboardingController.fourthCell.description" = "3-Day free trial, then 349,00 RUB/Week";
+
+"OnboardingController.continueButton.title" = "Continue";
+
+//MARK: - main controller
+
+"MainController.cameraButton.title" = "Camera";
+"MainController.galleryButton.title" = "Gallery";
+"MainController.description.labelText" = "Take or choose photo to cut out";
+"MainController.recentLabel.text" = "Recent";
+"MainController.seeAllLabel.text" = "See all";
+"MainController.latestImagesLabel.text" = "No latest images";
+"MainController.latestImagesDescription.text" = "Check access to your images or take a photo now to get started with the app";
+
+
