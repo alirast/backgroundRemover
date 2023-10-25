@@ -39,6 +39,7 @@ final class OnboardingCell: UICollectionViewCell {
         if cellType == .fourth {
             configureShadowGradientLayers()
         }
+        addLabelsOverShadowLayers()
         cellImageView.image = cellType.getCellImage()
         titleLabel.text = cellType.getTitle()
         descriptionLabel.text = cellType.getDescription()
@@ -93,6 +94,11 @@ final class OnboardingCell: UICollectionViewCell {
     
     private func addSubViews() {
         addSubview(cellImageView)
+        addSubview(titleLabel)
+        addSubview(descriptionLabel)
+    }
+    
+    private func addLabelsOverShadowLayers() {
         addSubview(titleLabel)
         addSubview(descriptionLabel)
     }
