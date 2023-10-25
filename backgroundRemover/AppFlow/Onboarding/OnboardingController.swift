@@ -15,14 +15,15 @@ final class OnboardingController: UIViewController {
     
     private lazy var onboardingCollectionView = UICollectionView(frame: .zero, collectionViewLayout: configureCollectionViewLayout())
     
-    private lazy var nextButton: UIButton = {
-        let nextButton = UIButton()
-        nextButton.setTitle("Next", for: .normal)
-        nextButton.layer.cornerRadius = 10
-        nextButton.backgroundColor = .blue
-        nextButton.layer.cornerCurve = .circular
-        nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
-        return nextButton
+    private lazy var continueButton: UIButton = {
+        let continueButton = UIButton()
+        continueButton.setTitle("Continue", for: .normal)
+        continueButton.titleLabel?.font = UIFont(name: "Gilroy", size: 18)
+        continueButton.layer.cornerRadius = 10
+        continueButton.backgroundColor = .blueColor
+        continueButton.layer.cornerCurve = .circular
+        continueButton.addTarget(self, action: #selector(continueButtonTapped), for: .touchUpInside)
+        return continueButton
     }()
     
     private lazy var pageControl: UIPageControl = {
@@ -57,7 +58,7 @@ final class OnboardingController: UIViewController {
     }
     
     private func addSubViews() {
-        view.addSubview(nextButton)
+        view.addSubview(continueButton)
         view.addSubview(pageControl)
         view.addSubview(onboardingCollectionView)
     }
@@ -78,7 +79,7 @@ final class OnboardingController: UIViewController {
         return layout
     }
     
-    @objc private func nextButtonTapped() {
+    @objc private func continueButtonTapped() {
         selectedCell += 1
         guard selectedCell < cells.count else {
             presenter?.onboardingEnded()
@@ -91,13 +92,13 @@ final class OnboardingController: UIViewController {
     private func setupConstraints() {
         onboardingCollectionView.snp.makeConstraints { make in
             make.top.leading.trailing.equalToSuperview()
-            make.bottom.equalTo(nextButton.snp.top)
+            make.bottom.equalTo(continueButton.snp.top)
         }
         
-        nextButton.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview().inset(15)
-            make.height.equalTo(50)
-            make.bottom.equalTo(pageControl.snp.top).inset(-10)
+        continueButton.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview().inset(98)
+            make.height.equalTo(60)
+            make.bottom.equalTo(pageControl.snp.top).inset(-30)
         }
         
         pageControl.snp.makeConstraints { make in

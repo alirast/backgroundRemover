@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4F3912C32AE93C4B00147925 /* MediaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3912C22AE93C4B00147925 /* MediaController.swift */; };
 		4F3912C52AE93C7800147925 /* MediaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3912C42AE93C7800147925 /* MediaPresenter.swift */; };
+		4F3912C92AE96A7700147925 /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3912C82AE96A7700147925 /* HexColor.swift */; };
 		4F85F3D22AE80ADB009A2B46 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F85F3D12AE80ADB009A2B46 /* CollectionView.swift */; };
 		4F85F3D52AE810D1009A2B46 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F85F3D42AE810D1009A2B46 /* MainController.swift */; };
 		4F85F3D72AE810FA009A2B46 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F85F3D62AE810FA009A2B46 /* MainPresenter.swift */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		4F3912C22AE93C4B00147925 /* MediaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaController.swift; sourceTree = "<group>"; };
 		4F3912C42AE93C7800147925 /* MediaPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPresenter.swift; sourceTree = "<group>"; };
+		4F3912C82AE96A7700147925 /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
 		4F85F3D12AE80ADB009A2B46 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		4F85F3D42AE810D1009A2B46 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		4F85F3D62AE810FA009A2B46 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				4F85F3D12AE80ADB009A2B46 /* CollectionView.swift */,
+				4F3912C82AE96A7700147925 /* HexColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F3912C92AE96A7700147925 /* HexColor.swift in Sources */,
 				4FD757192AE6E2AF00EF48E1 /* AppDelegate.swift in Sources */,
 				4FD7572F2AE6E33A00EF48E1 /* Coordinator.swift in Sources */,
 				4FD757312AE6E35600EF48E1 /* NavigationProtocol.swift in Sources */,

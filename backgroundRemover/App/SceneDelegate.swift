@@ -15,11 +15,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         coordinator = Coordinator(windowScene: windowScene)
-        if UserDefaultsManager.isOnboardingPassed {
-            coordinator?.routeToMainController()
-        } else {
+        //if UserDefaultsManager.isOnboardingPassed {
+            //coordinator?.routeToMainController()
+        //} else {
             coordinator?.start()
-        }
+        //}
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
