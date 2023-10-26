@@ -36,13 +36,16 @@ final class OnboardingCell: UICollectionViewCell {
     }
     
     func configure(cellType: OnboardingCellTypes) {
+        cellImageView.image = cellType.getCellImage()
+        titleLabel.text = cellType.getTitle()
+        descriptionLabel.text = cellType.getDescription()
         if cellType == .fourth {
             configureShadowGradientLayers()
         }
         addLabelsOverShadowLayers()
-        cellImageView.image = cellType.getCellImage()
-        titleLabel.text = cellType.getTitle()
-        descriptionLabel.text = cellType.getDescription()
+        if cellType == .fourth {
+            setupSpecialColorTextDescription()
+        }
     }
     
 //MARK: - Private funcs
@@ -101,6 +104,19 @@ final class OnboardingCell: UICollectionViewCell {
     private func addLabelsOverShadowLayers() {
         addSubview(titleLabel)
         addSubview(descriptionLabel)
+    }
+    
+    private func setupSpecialColorTextDescription() {
+        guard let labelText = descriptionLabel.text else { return }
+        let attributedString = NSMutableAttributedString(string: labelText)
+        
+        let commaRange = (labelText as NSString).range(of: ",")
+        attributedString.addAttribute(.foregroundColor, value: UIColor.grayColor1, range: NSRange(location: commaRange.location + 1, length: labelText.count - commaRange.location - 1))
+        
+        //first part of the text and first comma
+        attributedString.addAttribute(.foregroundColor, value: UIColor.white, range: NSRange(location: 0, length: commaRange.location + 1))
+
+        descriptionLabel.attributedText = attributedString
     }
 
 //MARK: - Constraints
