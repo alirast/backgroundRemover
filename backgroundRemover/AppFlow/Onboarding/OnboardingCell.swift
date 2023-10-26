@@ -45,6 +45,7 @@ final class OnboardingCell: UICollectionViewCell {
         addLabelsOverShadowLayers()
         if cellType == .fourth {
             setupSpecialColorTextDescription()
+            updateConstraintsFour()
         }
     }
     
@@ -129,13 +130,23 @@ final class OnboardingCell: UICollectionViewCell {
         
         titleLabel.snp.makeConstraints { make in
             make.top.equalTo(cellImageView.snp.bottom).inset(-35)
-            make.centerX.equalTo(snp.centerX)
+            make.leading.trailing.equalToSuperview().inset(24)
         }
         
         descriptionLabel.snp.makeConstraints { make in
             make.top.equalTo(titleLabel.snp.bottom).inset(-20)
             make.leading.trailing.equalToSuperview().inset(24)
             make.bottom.equalToSuperview()
+        }
+    }
+    
+    private func updateConstraintsFour() {
+        titleLabel.snp.updateConstraints { make in
+            make.leading.trailing.equalToSuperview().inset(90)
+        }
+        
+        descriptionLabel.snp.updateConstraints { make in
+            make.leading.trailing.equalToSuperview().inset(100)
         }
     }
 }

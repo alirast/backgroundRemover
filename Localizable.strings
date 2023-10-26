@@ -11,12 +11,12 @@
 "OnboardingController.firstCell.title" = "Remove background";
 "OnboardingController.secondCell.title" = "Leave a review";
 "OnboardingController.thirdCell.title" = "Choose your background";
-"OnboardingController.fourthCell.title" = "Get access to all files and features";
+"OnboardingController.fourthCell.title" = "Get access to all files \nand features";
 
 "OnboardingController.firstCell.description" = "Enhance your photos by effortlessly removing the background";
 "OnboardingController.secondCell.description" = "Share your feedback and help us improve. Your reviews matter";
 "OnboardingController.thirdCell.description" = "Express yourself by selecting unique backgrounds for your images";
-"OnboardingController.fourthCell.description" = "3-Day free trial, then 349,00 RUB/Week";
+"OnboardingController.fourthCell.description" = "3-Day free trial, \nthen 349,00 RUB/Week";
 
 "OnboardingController.continueButton.title" = "Continue";
 
