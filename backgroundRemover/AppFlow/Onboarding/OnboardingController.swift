@@ -40,12 +40,14 @@ final class OnboardingController: UIViewController {
         return continueButton
     }()
     
-    private lazy var pageControl: UIPageControl = {
-        let pageControl = UIPageControl()
-        pageControl.pageIndicatorTintColor = .white.withAlphaComponent(0.3)
-        pageControl.currentPageIndicatorTintColor = .blueColor
+    private lazy var pageControl: CustomPageControl = {
+        let pageControl = CustomPageControl()
+        pageControl.setNumberOfPages(numberOfPages: 4)
+        pageControl.setCurrentPage(currentPage: 1)
+        pageControl.setSizeForCircle(size: 8)
+        pageControl.setSizeForCurrentCircle(size: 14)
+        pageControl.hidesForSinglePage(isHidden: true)
         pageControl.isUserInteractionEnabled = false
-        pageControl.numberOfPages = 4
         return pageControl
     }()
     
@@ -86,7 +88,7 @@ final class OnboardingController: UIViewController {
         onboardingCollectionView.dataSource = self
         onboardingCollectionView.isPagingEnabled = true
         onboardingCollectionView.register(classCell: OnboardingCell.self)
-        onboardingCollectionView.isUserInteractionEnabled = true
+        onboardingCollectionView.isUserInteractionEnabled = false
     }
     
     private func configureCollectionViewLayout() -> UICollectionViewFlowLayout {
@@ -126,7 +128,7 @@ final class OnboardingController: UIViewController {
         }
         
         pageControl.snp.makeConstraints { make in
-            make.width.equalTo(200)
+            make.width.equalTo(70)
             make.height.equalTo(25)
             make.centerX.equalToSuperview()
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset((UIScreen.main.bounds.height / 100) * 5)
@@ -155,15 +157,32 @@ extension OnboardingController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let offset = scrollView.contentOffset.x
-        let width = scrollView.frame.width
-        let horizontalCenter = width / 2
-        pageControl.currentPage = Int(offset + horizontalCenter) / Int(width)
-    }
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let previousSelectedCell = selectedCell
         let width = scrollView.frame.width
         selectedCell = Int(scrollView.contentOffset.x / width)
-        pageControl.currentPage = selectedCell
+        
+        if selectedCell > previousSelectedCell {
+            pageControl.nextPage()
+        }
     }
+    
+    /*func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let previousSelectedCell = selectedCell
+        print("prev did end, cell", selectedCell)
+        let width = scrollView.frame.width
+        selectedCell = Int(scrollView.contentOffset.x / width)
+        print("did end", pageControl.currentPage)
+        print("did end, cell", selectedCell)
+        
+        if previousSelectedCell > selectedCell {
+            print("previous cell previousPageMethod", previousSelectedCell)
+            print("selected cell previousPageMethod", selectedCell)
+            pageControl.previousPage()
+        }
+        if selectedCell > previousSelectedCell {
+            print("previous cell nextPageMethod", previousSelectedCell)
+            print("selected cell nextPageMethod", selectedCell)
+            pageControl.nextPage()
+        }
+    }*/
 }

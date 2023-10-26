@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F0F74092AEA7A7D00E6A7C6 /* CustomPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0F74082AEA7A7D00E6A7C6 /* CustomPageControl.swift */; };
 		4F3912C32AE93C4B00147925 /* MediaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3912C22AE93C4B00147925 /* MediaController.swift */; };
 		4F3912C52AE93C7800147925 /* MediaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3912C42AE93C7800147925 /* MediaPresenter.swift */; };
 		4F3912C92AE96A7700147925 /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3912C82AE96A7700147925 /* HexColor.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F0F74082AEA7A7D00E6A7C6 /* CustomPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageControl.swift; sourceTree = "<group>"; };
 		4F3912C22AE93C4B00147925 /* MediaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaController.swift; sourceTree = "<group>"; };
 		4F3912C42AE93C7800147925 /* MediaPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPresenter.swift; sourceTree = "<group>"; };
 		4F3912C82AE96A7700147925 /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
@@ -89,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F0F74072AEA7A6C00E6A7C6 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				4F0F74082AEA7A7D00E6A7C6 /* CustomPageControl.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
 		4F3912C12AE93C3300147925 /* Media */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +206,7 @@
 		4FD757382AE6E81400EF48E1 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				4F0F74072AEA7A6C00E6A7C6 /* Subviews */,
 				4FD7572C2AE6E30700EF48E1 /* OnboardingPresenter.swift */,
 				4FD757342AE6E6D200EF48E1 /* OnboardingController.swift */,
 				4FD7573F2AE6F4EB00EF48E1 /* OnboardingCellTypes.swift */,
@@ -321,6 +332,7 @@
 				4FD757332AE6E53700EF48E1 /* ModuleBuilder.swift in Sources */,
 				4FD7571B2AE6E2AF00EF48E1 /* SceneDelegate.swift in Sources */,
 				4FD7572D2AE6E30700EF48E1 /* OnboardingPresenter.swift in Sources */,
+				4F0F74092AEA7A7D00E6A7C6 /* CustomPageControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
