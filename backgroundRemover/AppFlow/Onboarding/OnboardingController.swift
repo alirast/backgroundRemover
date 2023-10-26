@@ -123,13 +123,22 @@ final class OnboardingController: UIViewController {
         
         continueButton.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(98)
-            make.height.equalTo(60)
+            if UIScreen.main.bounds.height < 700 {
+                make.height.equalTo((UIScreen.main.bounds.height / 100) * 7)
+            } else {
+                make.height.equalTo(60)
+            }
             make.bottom.equalTo(pageControl.snp.top).inset(-30)
         }
         
         pageControl.snp.makeConstraints { make in
-            make.width.equalTo(70)
-            make.height.equalTo(25)
+            if UIScreen.main.bounds.height < 700 {
+                make.width.equalTo((UIScreen.main.bounds.width / 100) * 17)
+                make.height.equalTo((UIScreen.main.bounds.height / 100) * 1.5)
+            } else {
+                make.width.equalTo(70)
+                make.height.equalTo(25)
+            }
             make.centerX.equalToSuperview()
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset((UIScreen.main.bounds.height / 100) * 5)
         }

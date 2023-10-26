@@ -89,7 +89,7 @@ final class OnboardingCell: UICollectionViewCell {
     }
     
     private func configureDescriptionLabel() {
-        descriptionLabel.font = UIFont(name: "Gilroy-Light", size: 18)
+        descriptionLabel.font = UIFont(name: "Gilroy-Regular", size: 18)
         descriptionLabel.textColor = .grayColor1
         descriptionLabel.textAlignment = .center
         descriptionLabel.numberOfLines = 0
@@ -129,12 +129,20 @@ final class OnboardingCell: UICollectionViewCell {
         }
         
         titleLabel.snp.makeConstraints { make in
-            make.top.equalTo(cellImageView.snp.bottom).inset(-35)
+            if UIScreen.main.bounds.height < 700 {
+                make.top.equalTo(cellImageView.snp.bottom).inset(-(UIScreen.main.bounds.height / 100) * 3)
+            } else {
+                make.top.equalTo(cellImageView.snp.bottom).inset(-35)
+            }
             make.leading.trailing.equalToSuperview().inset(24)
         }
         
         descriptionLabel.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).inset(-20)
+            if UIScreen.main.bounds.height < 700 {
+                make.top.equalTo(titleLabel.snp.bottom).inset((UIScreen.main.bounds.height / 100) * 2)
+            } else {
+                make.top.equalTo(titleLabel.snp.bottom).inset(-20)
+            }
             make.leading.trailing.equalToSuperview().inset(24)
             make.bottom.equalToSuperview()
         }
@@ -142,11 +150,20 @@ final class OnboardingCell: UICollectionViewCell {
     
     private func updateConstraintsFour() {
         titleLabel.snp.updateConstraints { make in
-            make.leading.trailing.equalToSuperview().inset(90)
+            if UIScreen.main.bounds.height < 700 {
+                make.leading.trailing.equalToSuperview().inset(50)
+            } else {
+                make.leading.trailing.equalToSuperview().inset(90)
+            }
         }
         
         descriptionLabel.snp.updateConstraints { make in
-            make.leading.trailing.equalToSuperview().inset(100)
+            if UIScreen.main.bounds.height < 700 {
+                make.leading.trailing.equalToSuperview().inset(50)
+                make.top.equalTo(titleLabel.snp.bottom).inset(-(UIScreen.main.bounds.height / 100) * 1.5)
+            } else {
+                make.leading.trailing.equalToSuperview().inset(100)
+            }
         }
     }
 }
